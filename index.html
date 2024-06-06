@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Stopwatch, Timer, and Local Time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="selection-screen" class="modal">
+        <div class="modal-content">
+            <h1>Select Function</h1>
+            <button id="select-timer">Timer</button>
+            <button id="select-stopwatch">Stopwatch</button>
+        </div>
+    </div>
+
+    <div id="stopwatch-section" class="section hidden">
+        <h1>Stopwatch</h1>
+        <div id="stopwatch">00:00:00</div>
+        <div class="buttons">
+            <button id="startPause">Start</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+        </div>
+        <table id="lapTimes"></table>
+    </div>
+
+    <div id="timer-section" class="section hidden">
+        <h1>Timer</h1>
+        <div class="timer-display" id="timer-display">00:00:00</div>
+        <div class="timer-setter">
+            <input type="number" id="hours" placeholder="HH" min="0">
+            <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+            <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+        </div>
+        <div class="buttons">
+            <button id="start-pause-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h1>Local Time</h1>
+        <div id="clock"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
